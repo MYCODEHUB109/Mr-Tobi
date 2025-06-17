@@ -3,9 +3,7 @@
 
 
 
-:root {
---transition: 0.3s ease-in-out;}
-       
+   
 
 .logo {
     font-family: "Syne", sans-serif;
@@ -13,7 +11,6 @@
     font-size: 24px;
     color: #6666;
     text-decoration: none;
-    transition: var(--transition);
 }
 
 
@@ -97,7 +94,7 @@ list-style: none;
     content: "";
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color:#fff;
     position: absolute;
     left: 0;
   }
