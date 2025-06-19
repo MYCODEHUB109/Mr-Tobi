@@ -395,12 +395,9 @@ list-style: none;
         }
 
        /* work section */
-        .work {
+        .work-section {
             padding: 150px 0;
         }
-
-
-
 
         .section-header {
             display: flex;
@@ -419,6 +416,10 @@ list-style: none;
             opacity: 0;
             transform: translateY(30px);
             margin-bottom: 0;
+            font-weight: 700;
+            font-style: italic;
+            font-family: "Syne", sans-serif;
+            line-height: 1.1;
         }
 
 
@@ -452,6 +453,81 @@ list-style: none;
           width: 100%;
           color: #000;
         }
+
+
+
+      .about {
+    padding: 150px 0;
+    background-color: #f2f2f2;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.about-text.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-title {
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+
+
+.about-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #666666;
+}
+
+
+.about-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color:#666666;
+}
+
+
+.about-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.skill-tag {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #cccccc;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+
+.about-image.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-image {
+    transition: var(--transition);
+    position: relative;
+}
+
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    filter: grayscale(100%);
+}
+
 
 
 
@@ -592,92 +668,7 @@ list-style: none;
           /* about-secion */
 
 
-         
-.about-section {
-  display: block;
-  background-color: rgba(100, 100, 100, 0.086);
-  padding: 150px 0;
-}
-
-
-
-          .about-content{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 100px;
-            align-items: center;
-
-          }
-
-          .about-text.active {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .about-text {
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: var(--transition);
-        }
-        .about-title {
-          font-size: 60px;
-          margin-bottom: 40px;
-          line-height: 1.1;
-          font-family: "Syne", sans-serif;
-        }
-
-
-
-
-        .about-description {
-            font-size: 18px;
-            margin-bottom: 30px;
-            color: gray;
-        }
-
-        .about-skill {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 30px;
-          
-        }
-
-        .about-image.active {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-
-        .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.8;
-            filter: grayscale(100%);
-            border-radius: 0;
-        }
-
-
-        /* about section */
-
-        .skill-tag {
-          display: inline-block;
-          padding:7px 17px;
-          border: 1px solid #bbb;
-          font-size: 14px;
-          background-color: #fff; 
-          color: #000; 
-          transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-          font-family: "Syne", sans-serif;
-
-        }
-
-        .skill-tag:hover {
-          background-color: #000;
-          color: #fff;
-        }
-
+  
         /* .stats-section */
 
         .stats-section{
@@ -1224,6 +1215,7 @@ list-style: none;
 
 @media (max-width: 576px) {
   .project-content {
+    border-radius: 20px;
     background-color: rgba(67, 65, 65, 0.5); /* Add a semi-transparent background color */
     padding: 10px; /* Add some padding */
   }
@@ -1428,7 +1420,7 @@ list-style: none;
             </div>
           </div>
           <div class="about-image active">
-            <img src="assets/img/tb2.jpg" alt="Tobi Adeosun" class="about-img" loading="lazy">
+            <img src="image/tb2.jpg" alt="Tobi Adeosun" class="about-img" loading="lazy">
           </div>
         </div>
       </div>
