@@ -548,6 +548,7 @@ list-style: none;
             height: 60vh;
             position: relative;
             overflow: hidden;
+            text-align: center;
             cursor: pointer;
         }
 
@@ -612,6 +613,8 @@ list-style: none;
             transform: scale(1.03);
             opacity: 0.7;
             background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
         }
         .second-project-bg-1 {
           background: url(/image/banner1.png) center/cover no-repeat;}
@@ -1080,6 +1083,13 @@ list-style: none;
     }
 }
 
+@media (max-width: 576px) {
+  .project-image {
+    background-position: center;
+    background-size: cover;
+  }
+  
+
 
 
 
@@ -1257,73 +1267,59 @@ list-style: none;
         </div>
       </header>
     <main>
-          <!-- home section -->
           <section class="hero">
-            <div class="container">
-              <div class="section-content">
-  
-                <h1 class="card-title">
-                  Creating Digital Experiences 
-                </h1>
-                <p class="card-subtitle">   Crafting digital experiences with clean code and creative design,
-                  bringing ideas to life through modern web solutions.
-               </p>
-  
-               <a href="" class="hero-cta">
-                View Portfolio</a>
-  
-              </div>
-            </div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="section-content">
+        <h1 class="card-title">Creating Digital Experiences</h1>
+        <p class="card-subtitle">
+          Crafting digital experiences with clean code and creative design,
+          bringing ideas to life through modern web solutions.
+        </p>
+        <a href="#" class="hero-cta">View Portfolio</a>
+      </div>
 
+      <div class="cube-container">
+        <!-- Cube 1 -->
+        <div class="cube cube-1">
+          <div class="cube-face" style="transform: translateZ(75px)"></div>
+          <div class="cube-face" style="transform: translateZ(-75px) rotateY(180deg)"></div>
+          <div class="cube-face" style="transform: translateX(75px) rotateY(90deg)"></div>
+          <div class="cube-face" style="transform: translateX(-75px) rotateY(-90deg)"></div>
+          <div class="cube-face" style="transform: translateY(75px) rotateX(90deg)"></div>
+          <div class="cube-face" style="transform: translateY(-75px) rotateX(-90deg)"></div>
+        </div>
 
-         
-<!-- animation section -->
+        <!-- Cube 2 -->
+        <div class="cube cube-2">
+          <div class="cube-face" style="transform: translateZ(50px)"></div>
+          <div class="cube-face" style="transform: translateZ(-50px) rotateY(180deg)"></div>
+          <div class="cube-face" style="transform: translateX(50px) rotateY(90deg)"></div>
+          <div class="cube-face" style="transform: translateX(-50px) rotateY(-90deg)"></div>
+          <div class="cube-face" style="transform: translateY(50px) rotateX(90deg)"></div>
+          <div class="cube-face" style="transform: translateY(-50px) rotateX(-90deg)"></div>
+        </div>
 
-<div class="cube-container">
-    <!-- Cube 1 -->
-    <div class="cube cube-1">
-      <div class="cube-face" style="transform: translateZ(75px)"></div>
-      <div class="cube-face" style="transform: translateZ(-75px) rotateY(180deg)"></div>
-      <div class="cube-face" style="transform: translateX(75px) rotateY(90deg)"></div>
-      <div class="cube-face" style="transform: translateX(-75px) rotateY(-90deg)"></div>
-      <div class="cube-face" style="transform: translateY(75px) rotateX(90deg)"></div>
-      <div class="cube-face" style="transform: translateY(-75px) rotateX(-90deg)"></div>
+        <!-- Cube 3 -->
+        <div class="cube cube-3">
+          <div class="cube-face" style="transform: translateZ(37.5px)"></div>
+          <div class="cube-face" style="transform: translateZ(-37.5px) rotateY(180deg)"></div>
+          <div class="cube-face" style="transform: translateX(37.5px) rotateY(90deg)"></div>
+          <div class="cube-face" style="transform: translateX(-37.5px) rotateY(-90deg)"></div>
+          <div class="cube-face" style="transform: translateY(37.5px) rotateX(90deg)"></div>
+          <div class="cube-face" style="transform: translateY(-37.5px) rotateX(-90deg)"></div>
+        </div>
+      </div>
     </div>
-  
-
- 
-  <!-- Cube 2 -->
-  <div class="cube cube-2">
-    <div class="cube-face" style="transform: translateZ(50px)"></div>
-    <div class="cube-face" style="transform: translateZ(-50px) rotateY(180deg)"></div>
-    <div class="cube-face" style="transform: translateX(50px) rotateY(90deg)"></div>
-    <div class="cube-face" style="transform: translateX(-50px) rotateY(-90deg)"></div>
-    <div class="cube-face" style="transform: translateY(50px) rotateX(90deg)"></div>
-    <div class="cube-face" style="transform: translateY(-50px) rotateX(-90deg)"></div>
   </div>
 
-   <!-- Cube 3 -->
-  
-  <!-- Cube 3 -->
-  <div class="cube cube-3">
-    <div class="cube-face" style="transform: translateZ(37.5px)"></div>
-    <div class="cube-face" style="transform: translateZ(-37.5px) rotateY(180deg)"></div>
-    <div class="cube-face" style="transform: translateX(37.5px) rotateY(90deg)"></div>
-    <div class="cube-face" style="transform: translateX(-37.5px) rotateY(-90deg)"></div>
-    <div class="cube-face" style="transform: translateY(37.5px) rotateX(90deg)"></div>
-    <div class="cube-face" style="transform: translateY(-37.5px) rotateX(-90deg)"></div>
-  </div>
-</div>
-
-</div>
-
-<!-- scroller section  -->
-<div class="scroll-indicator">
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator">
     <p>Scroll Down</p>
     <i class="fas fa-chevron-down"></i>
   </div>
-  
-          </section>
+</section>
+
   
   
   
