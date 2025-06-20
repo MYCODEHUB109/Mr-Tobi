@@ -131,15 +131,13 @@
   max-width: 1400px;
   margin: 0 auto;
 }
-.section-content {
-  width: 100%;
-  animation: fadeInUp 0.5s ease-in-out;
-  position: relative;
-  z-index: 2;
-}
-.section-title {
-  font-size: 80px;
-  transition: all 0.3s ease-in-out, opacity 0.3s, transform 0.3s;
+.hero-content {
+    width: 100%;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: var(--transition);
+    position: relative;
+    z-index: 2;
 }
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(50px); }
@@ -789,54 +787,47 @@
         }
 
 /* RESPONSIVE MEDIA QUERIES */
-
 @media (max-width: 1200px) {
   .card-title { font-size: 80px; }
   .section-title { font-size: 60px; }
   .about-title { font-size: 50px; }
   .project { height: 50vh; }
-  .cube-1 {width: 120px; height: 120px;}
-  .cube-2 { width: 80px; height: 80px;}
-  .cube-3 { width: 60px;height: 60px;}
-  .project-title {font-size: 1.6rem;}
-  .project {height: 50vh; }
-
+  .cube-1 { width: 120px; height: 120px; }
+  .cube-2 { width: 80px; height: 80px; }
+  .cube-3 { width: 60px; height: 60px; }
+  .project-title { font-size: 1.6rem; }
 }
-
 
 @media (max-width: 992px) {
   .card-title { font-size: 60px; }
   .section-title, .contact-title { font-size: 50px; }
   .stats-grid { grid-template-columns: 1fr; }
-  #navbarScroll {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 70%;
-    height: 100vh;
-    background-color: #fff;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    transition: all 0.5s ease;
-    z-index: 100; }
- .cube-container { width: 40%;}
+  #navbarScroll { 
+    position: fixed; 
+    top: 0; 
+    right: -100%; 
+    width: 70%; 
+    height: 100vh; 
+    background-color: #fff; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 30px; 
+    transition: all 0.5s ease; 
+    z-index: 100; 
+  }
+  .cube-container { width: 40%; }
   #navbarScroll.show { right: 0; box-shadow: -10px 0 30px rgba(0,0,0,0.1); }
   .nav-items { flex-direction: column; }
-  .project-grid {grid-gap: 1.5rem;}
-  .project.large {grid-column: span 6; }
-  .project-title { font-size: 1.4rem;}
-  .project.small {grid-column: span 6;}
-  .project-content { padding: 1.5rem;}
-  .project {height: 45vh; }
-
- 
+  .project-grid { grid-gap: 1.5rem; }
+  .project { height: 45vh; }
+  .project.large, .project.small { grid-column: span 6; }
+  .project-title { font-size: 11.4rem; }
+  .project-content { padding: 1.5rem; }
 }
 
 @media (max-width: 768px) {
-  .section-title { font-size: 40px; }
-  .project.large, .project.small { grid-column: span 12;}
+  .project.large, .project.small { grid-column: span 12; }
   .stats-grid { grid-template-columns: 1fr; }
   .footer-content { flex-direction: column; text-align: center; gap: 20px; }
   .contact-title { font-size: 40px; }
@@ -844,34 +835,34 @@
   .about-content { grid-template-columns: 1fr; gap: 50px; }
   .about-title { font-size: 40px; }
   .hero-inner { flex-direction: column; align-items: center; text-align: center; }
-  .cube-container { opacity: 0.5;}
-  .project.large, .project.small { grid-column: span 12;}
-  .project-content {opacity: 0.9;transform: translateY(0);}
-  .project-title {font-size: 1.4rem;}  
-  .project {height: 40vh; }
-
-  }
-
+  .cube-container { opacity: 0.5; }
+  .project-content { opacity: 0.9; transform: translateY(0); }
+  .project { height: 40vh; }
+}
 
 @media (max-width: 576px) {
-  .card-title { font-size: 40px; }
+ .card-title {
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: left; 
+  }
+  .card-subtitle {
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.5}
   .section-title, .contact-title { font-size: 26px; }
   .contact-subtitle { font-size: 16px; }
-  .project-grid {grid-gap: 1rem;}
+  .project-grid { grid-gap: 1rem; }
   .project-title { font-size: 1.2rem; }
   .about-title { font-size: 30px; }
   .about-description { font-size: 16px; }
   .submit-btn { padding: 10px 20px; }
-  .cube-container {
-    width: 100%; opacity: 0.3;}
-  .project-content {background-color: rgba(67, 65, 65, 0.5);padding: 10px 12px;color: #fff; }
-  .cube-1 {right: 10%; }
-  .cube-2 {right: 40%;}
+  .cube-container { width: 100%; opacity: 0.3; }
+  .project-content { background-color: rgba(67, 65, 65, 0.5); padding: 10px 12px; color: #fff; }
+  .cube-1 { right: 10%; }
+  .cube-2 { right: 40%; }
   .cube-3 { right: 20%; }
-  .project-title {font-size: 1.2rem;}
-  .project-content { padding: 1rem; }
-  .project-content {padding: 1rem;}
-      .project {height: 35vh; }
+  .project { height:35vh;}
 }
  </style>
     </head>
@@ -907,8 +898,8 @@
     <div class="hero-inner">
       <div class="section-content">
         <h1 class="card-title">
-          Creating <br>
-          Digital  <br>
+          Creating<br>
+          Digital<br>
           Experiences</h1>
         <p class="card-subtitle">
           Crafting digital experiences with clean code and creative design,
