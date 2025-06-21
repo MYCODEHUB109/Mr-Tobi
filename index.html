@@ -32,93 +32,131 @@
 }
 
 
+          
+ @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap');
+
+
+
+:root {
+--transition: 0.3s ease-in-out;}
+       
+
 .logo {
-  font-family: "Syne", sans-serif;
-  font-weight: 800;
-  font-size: 24px;
-  color: #6666;
-  text-decoration: none;
+    font-family: "Syne", sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    color: #666666;
+    text-decoration: none;
+    transition: var(--transition);
 }
 
-/* === HEADER === */
+
 #main-header {
   transition: all 0.3s ease;
 }
+
 #main-header.scrolled {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
   background-color: rgba(255, 255, 255, 0.95) !important;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 20px rgba(0, 0,0, 0.05);
 }
 
-.nav-items {
+.nav-items{
   display: flex;
-  text-transform: uppercase;
-  gap: 40px;
-  list-style: none;
+text-transform: uppercase;
+gap: 40px;
+list-style: none;
+
+         }
+
+         
+
+
+
+        .nav-link {
+            color: #666666;
+            text-decoration: none;
+           font-size: 14px;
+            font-family: 'Syne', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+
+
+
+        .nav-link::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 1px;
+          background-color: #666666;
+          transition: 0.3s ease-in-out;
+          
+          
+        }
+        .nav-link:hover {
+          color: black;
+        }
+
+        .nav-link:hover::after {
+          width: 100%;
+          background-color: black;
+        }
+    
+
+  
+    .navbar-toggler {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+
+    .navbar-toggler-icon {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    position: relative;
+  }
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after {
+    content: "";
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+  }
+  .navbar-toggler-icon::before {
+    top: -8px;
+  }
+  .navbar-toggler-icon::after {
+    top: 8px;
+  }
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
 }
 
-.nav-link {
-  color: #666;
-  text-decoration: none;
-  font-size: 14px;
-  font-family: 'Syne', sans-serif;
-  letter-spacing: 1px;
-  position: relative;
-}
-.nav-link:hover {
-  color: black;
-}
-.nav-link::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: #666;
-  transition: 0.3s ease-in-out;
-}
-.nav-link:hover::after {
-  width: 100%;
-  background-color: black;
-}
 
-.navbar-toggler {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 5px;
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  z-index: 1100;
-}
+
 .navbar-toggler-icon {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  display: block;
-  position: relative;
-}
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-  content: "";
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  position: absolute;
-  left: 0;
-}
-.navbar-toggler-icon::before {
-  top: -8px;
-}
-.navbar-toggler-icon::after {
-  top: 8px;
+  width: 30px;
+  height: 30px;
+  transition: 0.3;
 }
 
-/* === HERO === */
+
+/*  HERO s*/
 .hero {
   height: 100vh;
   display: flex;
@@ -802,20 +840,7 @@
   .card-title { font-size: 60px; }
   .section-title, .contact-title { font-size: 50px; }
   .stats-grid { grid-template-columns: 1fr; }
-  #navbarScroll { 
-    position: fixed; 
-    top: 0; 
-    right: -100%; 
-    width: 70%; 
-    height: 100vh; 
-    background-color: #fff; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    gap: 30px; 
-    transition: all 0.5s ease; 
-    z-index: 100; 
-  }
+
   .cube-container { width: 40%; }
   #navbarScroll.show { right: 0; box-shadow: -10px 0 30px rgba(0,0,0,0.1); }
   .nav-items { flex-direction: column; }
@@ -824,6 +849,40 @@
   .project.large, .project.small { grid-column: span 6; }
   .project-title { font-size: 11.4rem; }
   .project-content { padding: 1.5rem; }
+  #navbarScroll {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: all 0.5s ease;
+    z-index: 100;
+  }
+
+  #navbarScroll.show {
+    right: 0;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+  }
+
+
 }
 
 @media (max-width: 768px) {
@@ -838,6 +897,16 @@
   .cube-container { opacity: 0.5; }
   .project-content { opacity: 0.9; transform: translateY(0); }
   .project { height: 40vh; }
+   .nav-items.show {
+      transform: translateX(0);
+}
+    .navbar-toggler {
+      display: block;
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 1100;
+    }
 }
 
 @media (max-width: 576px) {
@@ -850,7 +919,8 @@
     text-align: left;
     font-size: 16px;
     line-height: 1.5}
-  .section-title, .contact-title { font-size: 26px; }
+  .section-title { font-size: 80px; }
+  .contact-title { font-size: 26px; }
   .contact-subtitle { font-size: 16px; }
   .project-grid { grid-gap: 1rem; }
   .project-title { font-size: 1.2rem; }
@@ -864,6 +934,13 @@
   .cube-3 { right: 20%; }
   .project { height:35vh;}
 }
+
+@media (max-width: 768px) {
+    .navbar-toggler {
+        display: block;
+        border: none;
+    }
+}
  </style>
     </head>
 
@@ -875,7 +952,7 @@
                 <div class="container">
           <nav class="navbar navbar-expand-lg navbar-light">
             <a class="logo" href="#">Tobi Adeosun</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
               aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
